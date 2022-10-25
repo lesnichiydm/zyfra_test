@@ -1,0 +1,141 @@
+[
+{
+    "model": "warehouse.warehouse",
+    "pk": 1,
+    "fields": {
+        "name": "Test",
+        "area": "SRID=4326;POLYGON ((30 10, 40 40, 20 40, 10 20, 30 10))"
+    }
+},
+{
+    "model": "warehouse.warehousemovemineralevent",
+    "pk": 1,
+    "fields": {
+        "datetime": "2022-10-24T21:56:04.429Z",
+        "extraction_point": 4,
+        "trip_truck": null,
+        "total_tons": 900.0,
+        "si_o_2_tons": 306.0,
+        "fe_tons": 585.0,
+        "warehouse": 1
+    }
+},
+{
+    "model": "truck.truckmodel",
+    "pk": 1,
+    "fields": {
+        "name": "БЕЛАЗ",
+        "capacity": 120
+    }
+},
+{
+    "model": "truck.truckmodel",
+    "pk": 2,
+    "fields": {
+        "name": "Komatsu",
+        "capacity": 110
+    }
+},
+{
+    "model": "truck.truck",
+    "pk": 1,
+    "fields": {
+        "side_number": "101",
+        "model": 1
+    }
+},
+{
+    "model": "truck.truck",
+    "pk": 2,
+    "fields": {
+        "side_number": "102",
+        "model": 1
+    }
+},
+{
+    "model": "truck.truck",
+    "pk": 3,
+    "fields": {
+        "side_number": "K103",
+        "model": 2
+    }
+},
+{
+    "model": "truck.triptruck",
+    "pk": 1,
+    "fields": {
+        "truck": 1,
+        "complite": false,
+        "extraction_point": 1,
+        "weight_tons": 100.0,
+        "upload_datetime": "2022-10-24T21:56:04.432Z",
+        "warehouse": null,
+        "unload_point": null,
+        "unload_datetime": null
+    }
+},
+{
+    "model": "truck.triptruck",
+    "pk": 2,
+    "fields": {
+        "truck": 2,
+        "complite": false,
+        "extraction_point": 1,
+        "weight_tons": 125.0,
+        "upload_datetime": "2022-10-24T21:56:04.433Z",
+        "warehouse": null,
+        "unload_point": null,
+        "unload_datetime": null
+    }
+},
+{
+    "model": "truck.triptruck",
+    "pk": 3,
+    "fields": {
+        "truck": 3,
+        "complite": false,
+        "extraction_point": 1,
+        "weight_tons": 120.0,
+        "upload_datetime": "2022-10-24T21:56:04.434Z",
+        "warehouse": null,
+        "unload_point": null,
+        "unload_datetime": null
+    }
+},
+{
+    "model": "extraction_point.extractionpoint",
+    "pk": 1,
+    "fields": {
+        "name": "P_1",
+        "percent_si_o_2": 32.0,
+        "percent_fe": 67.0
+    }
+},
+{
+    "model": "extraction_point.extractionpoint",
+    "pk": 2,
+    "fields": {
+        "name": "P_2",
+        "percent_si_o_2": 30.0,
+        "percent_fe": 65.0
+    }
+},
+{
+    "model": "extraction_point.extractionpoint",
+    "pk": 3,
+    "fields": {
+        "name": "P_1",
+        "percent_si_o_2": 35.0,
+        "percent_fe": 62.0
+    }
+},
+{
+    "model": "extraction_point.extractionpoint",
+    "pk": 4,
+    "fields": {
+        "name": "Fake_for_initial",
+        "percent_si_o_2": 34.0,
+        "percent_fe": 65.0
+    }
+}
+]

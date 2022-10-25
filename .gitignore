@@ -1,0 +1,8 @@
+*.pyc
+*.swp
+*.sqlite3
+tags
+tagbardebug.log
+.ropeproject
+.cache
+.pytest_cache

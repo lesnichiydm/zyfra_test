@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+
+{% block main %}
+<h2>Изменения на складах затронутых тестовой выгрузкой</h2>
+{% if warehouse_list%}
+    <table>
+        <tr>
+            <th>Название склада</th>
+            <th>Обьем до загрузки, т</th>
+            <th>Обьем после загрузки, т</th>
+            <th>Качественные хар-ки после загрузки</th>
+        </tr>
+        {% for w in warehouse_list %}
+            <tr>
+                <td>{{w.name}}</td>
+                <td>{{w.weight_tons_pre_upload}}</td>
+                <td>{{w.weight_tons}}</td>
+                <td>{{w.minerals_info}}</td>
+            </tr>
+        {% endfor %}
+    </table>
+{% else %}
+    <h4>Все выгрузки произошли мимо складов</h4>
+{% endif %}
+<br>
+<a href="{% url 'truck:trip_truck_calc_list' %}">Вернуться</a>
+{% endblock main %}
+

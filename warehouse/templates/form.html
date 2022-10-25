@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+
+{% block main %}
+<form method="POST" action="">
+    {% csrf_token %}
+    {{ form.management_form }}
+    <table>
+    {% for i in form %}
+        {% if forloop.first %}
+            <tr>
+                {% for ii in i.visible_fields %}
+                    <th>
+                    {{ii.label}}
+                    </th>
+                {% endfor %}
+            </tr>
+        {% endif %}
+        <tr>
+            {% for ii in i.visible_fields %}
+                <td>
+                {% if ii.field.disabled is True %}
+                    {{ii.value}}
+                {% else %}
+                    {{ii}}
+                    {{ii.errors}}
+                {% endif %}
+                </td>
+            {% endfor %}
+        </tr>
+    {% endfor %}
+    </table>
+    {% for i in form %}
+        {% for ii in i.hidden_fields %}
+            {{ii}}
+        {% endfor %}
+    {% endfor %}
+
+    <br>
+    <input type="submit" value="Рассчитать">
+</form>
+{% endblock main %}
